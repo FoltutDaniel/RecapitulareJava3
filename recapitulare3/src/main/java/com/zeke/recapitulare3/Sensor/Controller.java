@@ -4,7 +4,6 @@ public class Controller {
 	private static Controller single_instance = null;
 	private TemperatureSensor temperatureSensor;
 	private LightSensor lightSensor;
-	public String s;
 
 	private Controller(TemperatureSensor temperatureSensor, LightSensor lightSensor) {
 		this.lightSensor = lightSensor;
@@ -19,6 +18,6 @@ public class Controller {
 	}
 	
 	public void control() {
-		s = "Ligh sensor value: "+lightSensor.readValue() +"/n/r" + "Temperature sensor value: "+temperatureSensor.readValue();
+		System.out.println("Ligh sensor value: "+lightSensor.readValue() +"\n\r" + "Temperature sensor value: "+temperatureSensor.readValue());
 	}
 }
